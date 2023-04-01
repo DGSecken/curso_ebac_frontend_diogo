@@ -1,0 +1,63 @@
+* {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(18, 0, 22);
+}
+
+h2, .error, .accept {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+form {
+    margin-top: 80px;
+}
+
+input, button {
+    display: block;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 40px;
+    resize: none;
+}
+
+h2 {
+    font-size: 65px;
+    text-align: center;
+    color: white;
+    }
+
+    button {
+        padding-right: 18px;
+        background-color: darkviolet;
+        color: white;
+    }
+    button:hover {
+        background-color: rgb(55, 0, 78);
+        cursor: pointer;
+    }
+    
+    .error, .accept {
+        font-size: 60px;
+        text-align: center;
+        background-color: red;
+        color: black;
+        display: none;
+    }
+
+    .accept{
+        background-color: rgb(0, 189, 16);
+        color: rgb(255, 255, 255);
+    }
