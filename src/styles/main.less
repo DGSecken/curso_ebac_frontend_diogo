@@ -1,4 +1,6 @@
 @import "maps.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@breakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
 
 * {
     margin: 0;
@@ -86,7 +88,7 @@ section {
 }
 
 
-@media screen and (max-width: 1023px) {
+@media @breakpointTablet {
     .container {
         max-width: 80%;
     }
@@ -97,7 +99,7 @@ section {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media @breakpointMobile {
     .product {
         display: block;
     
