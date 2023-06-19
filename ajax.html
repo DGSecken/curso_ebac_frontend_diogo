@@ -40,6 +40,8 @@
             const followersElement = document.querySelector('#followers')
             const followingElement = document.querySelector('#following')
             const linkElement = document.querySelector('#link')
+            
+            try {
 
             fetch('https://api.github.com/users/DGSecken')
                 .then(function(res){
@@ -54,11 +56,13 @@
                 reposElement.innerText = json.public_repos;
                 linkElement.href = json.html_url;
             })
-            try {
-                fetch   
-            }
-            catch(err) {
-                alert ("Não foi possível carregar o perfil do GitHub")
+            
+            .catch(function(error) {
+                alert("Não foi possível carregar o perfil do GitHub: " + error);
+            });
+
+        } catch(err) {
+                alert ("Não foi possível carregar o perfil do GitHub:" + err);
             }
         })
     </script>
