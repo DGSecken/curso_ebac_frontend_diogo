@@ -42,28 +42,29 @@
             const linkElement = document.querySelector('#link')
             
             try {
+    fetch('https://api.github.com/users/DGSecken')
 
-            fetch('https://api.github.com/users/DGSecken')
-                .then(function(res){
-                    return res.json();
-            })
-            .then(function(json){
-                nameElement.innerText = json.name;
-                usernameElement.innerText = json.login;
-                avatarElement.src = json.avatar_url;
-                followingElement.innerText = json.following;
-                followersElement.innerText = json.followers;
-                reposElement.innerText = json.public_repos;
-                linkElement.href = json.html_url;
-            })
-            
-            .catch(function(error) {
-                alert("Não foi possível carregar o perfil do GitHub: " + error);
-            });
+        .then(function(res){
+            return res.json();
+    })
 
-        } catch(err) {
-                alert ("Não foi possível carregar o perfil do GitHub:" + err);
-            }
+    .then(function(json){
+        nameElement.innerText = json.name;
+        usernameElement.innerText = json.login;
+        avatarElement.src = json.avatar_url;
+        followingElement.innerText = json.following;
+        followersElement.innerText = json.followers;
+        reposElement.innerText = json.public_repos;
+        linkElement.href = json.html_url;
+    })
+
+    .catch(function(error){
+        alert("Não foi possível carregar o perfil do GitHub: " + error);
+    });
+
+} catch(err) {
+alert("Não foi possível carregar o perfil do GitHub: " + err);
+}
         })
     </script>
 </body>
