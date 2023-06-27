@@ -14,7 +14,10 @@ function Dev(name, age, workload ) {
 }
 
 const Employee1 = new Employee("Jones", 27, 4000);
+const Employee2 = new Employee("Charles", 40, 10000);
 const Developer1 = new Dev("Rupert", 23, "12hr");
+
 
 console.log(Employee1);
 console.log(Developer1);
+console.log(Employee2);
