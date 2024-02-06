@@ -22,6 +22,7 @@
     },
     "license": "MIT",
     "scripts": {
+        "cypress": "cypress",
         "lint": "eslint . --fix",
         "test": "export FORCE_COLOR=1 && node tests/basic-test.js && node tests/safe-test.js"
     },
@@ -39,6 +40,7 @@
         "safe.d.ts"
     ],
     "devDependencies": {
+        "cypress": "^12.6.0",
         "eslint": "^5.2.0",
         "eslint-config-google": "^0.11.0"
     }
